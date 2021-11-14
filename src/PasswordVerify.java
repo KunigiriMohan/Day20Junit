@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -10,7 +12,7 @@ public class PasswordVerify {
         {
             return true;
         }
-        String regex="^(?=.*[a-z])(?=.*[A-Z])(?=.*d)[a-zA-Zd]{8,}$";    //Regex code for verifying Password
+        String regex="^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$";    //Regex code for verifying Password
         Pattern pattern= Pattern.compile(regex);
         if (pattern.matcher(password).matches())        //Checking entered password matches with regex code or not.
         {
